@@ -1,5 +1,5 @@
 <?php
-  namespace Control;
+  namespace View;
   /**
    * Autoloader a pour objectif de charger les class automatiquement
    * @namespace
@@ -14,7 +14,7 @@
       if (strpos($className, __NAMESPACE__ . "\\") === 0) {
         $className = str_replace(__NAMESPACE__ . "\\", '', $className);
         $className = str_replace("\\", "/", $className);
-        require "Control/" . $className . ".php";
+        require "View/" . $className . ".php";
       }
     }
 
